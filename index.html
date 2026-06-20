@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aroma — Chef privé à domicile & traiteur d'entreprise à Paris</title>
+<meta name="description" content="Aroma, chef privé formé à l'École Ferrandi Paris. Repas faits maison livrés chez vous, dîners privés et traiteur pour événements d'entreprise. Formule famille dès 120€/semaine.">
+<meta name="keywords" content="chef privé Paris, chef à domicile, traiteur entreprise Paris, chef Ferrandi, repas faits maison, traiteur événement entreprise, chef privé famille">
+<meta name="author" content="Aroma">
+<link rel="canonical" href="https://www.aroma-chef.fr/">
+
+<!-- Open Graph / réseaux sociaux -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aroma — Chef privé à domicile & traiteur d'entreprise à Paris">
+<meta property="og:description" content="Repas faits maison livrés chez vous, dîners privés et traiteur pour événements d'entreprise. Formé à l'École Ferrandi, Paris.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://www.aroma-chef.fr/">
+<meta property="og:site_name" content="Aroma">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Aroma — Chef privé à domicile & traiteur d'entreprise à Paris">
+<meta name="twitter:description" content="Repas faits maison livrés chez vous, dîners privés et traiteur pour événements d'entreprise. Formé à l'École Ferrandi, Paris.">
+
+<!-- Données structurées pour Google (rich results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "Aroma",
+  "description": "Chef privé à domicile et traiteur d'entreprise à Paris, formé à l'École Ferrandi.",
+  "url": "https://www.aroma-chef.fr/",
+  "telephone": "+33769269929",
+  "priceRange": "€€",
+  "areaServed": "Paris",
+  "founder": {
+    "@type": "Person",
+    "alumniOf": "École Ferrandi Paris"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF8F3;
+    --paper-deep:#F2ECE1;
+    --ink:#241F18;
+    --ink-soft:#5B5448;
+    --gold:#A9803E;
+    --gold-deep:#8A6A30;
+    --line: rgba(36,31,24,0.13);
+    --maxw: 1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    letter-spacing:0.005em;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
+  ::selection{background:var(--gold); color:var(--paper);}
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:rgba(251,248,243,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{ display:flex; align-items:center; justify-content:space-between; padding:20px 32px; }
+  .logo{ font-family:'Cormorant Garamond', serif; font-size:1.55rem; font-weight:600; letter-spacing:0.16em; display:flex; align-items:center; gap:9px; }
+  .logo-icon{ width:18px; height:24px; flex-shrink:0; color:var(--gold); }
+  .logo span{color:var(--gold);}
+  .nav-links{display:flex; gap:34px; align-items:center;}
+  .nav-links a{ font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); transition:color .25s ease; }
+  .nav-links a:hover{color:var(--gold-deep);}
+  .lang-toggle{ display:flex; gap:2px; border:1px solid var(--line); border-radius:30px; padding:3px; }
+  .lang-toggle button{
+    background:none; border:none; color:var(--ink-soft);
+    font-family:'Jost'; font-size:0.7rem; letter-spacing:0.04em;
+    padding:6px 11px; border-radius:30px; cursor:pointer; transition:all .25s ease;
+  }
+  .lang-toggle button.active{ background:var(--ink); color:var(--paper); }
+
+  /* ---------- HERO ---------- */
+  .hero{ min-height:96vh; display:flex; align-items:center; position:relative; overflow:hidden; padding-top:90px; }
+  .hero-tex{
+    position:absolute; inset:0; pointer-events:none;
+    background-image: radial-gradient(circle at 85% 20%, rgba(169,128,62,0.10), transparent 45%),
+                       radial-gradient(circle at 10% 85%, rgba(169,128,62,0.08), transparent 50%);
+  }
+  .hero .wrap{ display:grid; grid-template-columns: 1.05fr 0.95fr; gap:60px; align-items:center; position:relative; z-index:2; }
+  .eyebrow{
+    font-size:0.76rem; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold-deep);
+    margin-bottom:22px; display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{content:""; width:30px; height:1px; background:var(--gold-deep); display:inline-block;}
+  .hero h1{ font-size:clamp(2.7rem, 5.4vw, 4.6rem); line-height:1.05; margin-bottom:26px; font-weight:500; }
+  .hero h1 em{ font-style:italic; color:var(--gold-deep); font-weight:500; }
+  .hero p.lede{ font-size:1.1rem; color:var(--ink-soft); max-width:460px; margin-bottom:38px; }
+  .cta-row{display:flex; gap:18px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; padding:16px 30px;
+    font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:500;
+    transition:all .25s ease; border:1px solid var(--ink);
+  }
+  .btn-solid{background:var(--ink); color:var(--paper);}
+  .btn-solid:hover{background:var(--gold-deep); border-color:var(--gold-deep); transform:translateY(-2px);}
+  .btn-ghost{color:var(--ink); border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--ink); transform:translateY(-2px);}
+
+  /* signature: laurel-style plate emblem with sprig lines, classic & French */
+  .emblem-wrap{ position:relative; display:flex; align-items:center; justify-content:center; height:440px; }
+  .ring{
+    width:340px; height:340px; border-radius:50%;
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; position:relative;
+  }
+  .ring::before{
+    content:""; position:absolute; inset:24px; border-radius:50%; border:1px solid var(--line);
+  }
+  .ring .center{
+    font-family:'Cormorant Garamond'; font-style:italic; font-size:2.6rem; color:var(--gold-deep);
+    text-align:center;
+  }
+  .sprig{position:absolute; width:1px; background:var(--line);}
+  .leaf-svg{position:absolute; inset:0;}
+  .leaf-svg path{stroke:var(--gold); stroke-width:0.9; fill:none; opacity:0.55;}
+
+  /* ---------- TRUSTED BY ---------- */
+  .trusted{ border-bottom:1px solid var(--line); padding:34px 0; }
+  .trusted-inner{ display:flex; align-items:center; gap:34px; flex-wrap:wrap; }
+  .trusted-label{ font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink-soft); }
+  .trusted-logos{ display:flex; align-items:center; gap:18px; }
+  .trusted-name{
+    font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500;
+    font-size:1.3rem; color:var(--ink); letter-spacing:0.02em;
+  }
+  .trusted-sep{ color:var(--gold); }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section{padding:120px 0;}
+  .section-head{
+    display:flex; align-items:baseline; gap:22px; margin-bottom:60px;
+    border-bottom:1px solid var(--line); padding-bottom:26px;
+  }
+  .section-head .num{ font-family:'Cormorant Garamond'; font-style:italic; color:var(--gold-deep); font-size:1.05rem; }
+  .section-head h2{font-size:clamp(1.9rem, 3.2vw, 2.5rem);}
+  .section-head .tag{ margin-left:auto; font-size:0.74rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid; grid-template-columns: 0.85fr 1.15fr; gap:70px; align-items:start;}
+  .badge{ border:1px solid var(--line); padding:34px; background:var(--paper-deep); }
+  .badge .crest{
+    width:52px; height:52px; border-radius:50%; border:1px solid var(--gold-deep);
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+    font-family:'Cormorant Garamond'; font-style:italic; color:var(--gold-deep); font-size:1.25rem;
+  }
+  .badge h3{font-size:1.25rem; margin-bottom:8px; font-weight:500;}
+  .badge p{color:var(--ink-soft); font-size:0.92rem;}
+  .about-text p{color:var(--ink-soft); margin-bottom:20px; font-size:1.04rem; max-width:620px;}
+  .about-text strong{color:var(--ink); font-weight:500;}
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  .service-card{ background:var(--paper); padding:44px 36px; transition: background .3s ease; }
+  .service-card:hover{background:var(--paper-deep);}
+  .service-card .mark{ width:32px; height:32px; margin-bottom:24px; color:var(--gold-deep); }
+  .service-card h3{font-size:1.3rem; margin-bottom:12px; font-weight:500;}
+  .service-card p{color:var(--ink-soft); font-size:0.93rem;}
+
+  /* ---------- TRAVEL BLOCK ---------- */
+  .travel-block{
+    margin-top:50px; border:1px solid var(--line); background:var(--ink); padding:48px 50px;
+    position:relative; overflow:hidden;
+  }
+  .travel-block::before{
+    content:""; position:absolute; inset:0;
+    background: radial-gradient(circle at 88% 15%, rgba(169,128,62,0.18), transparent 50%);
+    pointer-events:none;
+  }
+  .travel-text{position:relative; z-index:1; max-width:560px;}
+  .travel-eyebrow{
+    font-size:0.74rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold);
+    display:block; margin-bottom:14px;
+  }
+  .travel-text h3{ color:var(--paper); font-size:1.8rem; margin-bottom:14px; font-weight:500; }
+  .travel-text p{ color:#C9C1AF; font-size:0.95rem; margin-bottom:24px; }
+  .travel-dish{
+    display:inline-flex; align-items:center; gap:12px; border:1px solid rgba(251,248,243,0.22);
+    padding:12px 20px; color:var(--paper); font-family:'Cormorant Garamond'; font-style:italic; font-size:1.05rem;
+  }
+  .travel-flag{font-style:normal; font-size:1.2rem;}
+
+  /* ---------- PRICE BANNER ---------- */
+  .price-banner{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:18px;
+    border:1px solid var(--line); background:var(--paper-deep); padding:30px 36px; margin-bottom:50px;
+  }
+  .price-banner .pb-text{ font-size:0.95rem; color:var(--ink-soft); max-width:520px; }
+  .price-banner .pb-text strong{ color:var(--ink); font-weight:500; }
+  .price-banner .pb-amount{ text-align:right; }
+  .price-banner .pb-amount .num{
+    font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500;
+    font-size:2.4rem; color:var(--gold-deep); line-height:1;
+  }
+  .price-banner .pb-amount .unit{ font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); }
+
+  /* ---------- GALLERY / DISHES ---------- */
+  .dishes-grid{ display:grid; grid-template-columns: repeat(5, 1fr); gap:22px; }
+  .dish-card{ display:flex; flex-direction:column; }
+  .dish-photo{
+    width:100%; aspect-ratio: 4/3; overflow:hidden; border:1px solid var(--line);
+    margin-bottom:16px; background:var(--paper-deep);
+  }
+  .dish-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .dish-name{ font-family:'Cormorant Garamond', serif; font-weight:500; font-size:1.12rem; margin-bottom:4px; }
+  .dish-meta{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; }
+  .dish-desc{ color:var(--ink-soft); font-size:0.84rem; max-width:90%; }
+  .dish-price{ font-family:'Cormorant Garamond', serif; font-style:italic; color:var(--gold-deep); font-size:1.05rem; white-space:nowrap; }
+  @media (max-width: 920px){ .dishes-grid{ grid-template-columns: repeat(2, 1fr); } }
+
+  /* ---------- CONTACT ---------- */
+  .contact{ background:var(--ink); color:var(--paper); }
+  .contact .ink-soft-c{color:#C9C1AF;}
+  .contact-grid{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap:70px; align-items:center; }
+  .contact h2{font-size:clamp(2rem,3.4vw,2.8rem); margin-bottom:22px; color:var(--paper);}
+  .contact p.lede{color:#C9C1AF; max-width:460px; margin-bottom:34px;}
+  .whatsapp-btn{
+    display:inline-flex; align-items:center; gap:14px; background:var(--gold);
+    color:var(--ink); padding:18px 32px; font-size:0.92rem; font-weight:500;
+    letter-spacing:0.03em; transition:all .25s ease;
+  }
+  .whatsapp-btn:hover{background:#C49850; transform:translateY(-2px);}
+  .contact-info{display:flex; flex-direction:column; gap:16px; margin-top:30px;}
+  .contact-info div{display:flex; gap:14px; align-items:center; font-size:0.9rem; color:#C9C1AF;}
+  .contact-info span.k{color:var(--gold); letter-spacing:0.1em; text-transform:uppercase; font-size:0.7rem; min-width:90px;}
+  .contact-card{ border:1px solid rgba(251,248,243,0.18); padding:40px; }
+  .contact-card h3{font-size:1.15rem; margin-bottom:24px; font-family:'Cormorant Garamond'; font-style:italic; font-weight:400; color:var(--paper);}
+  .contact-card .row{display:flex; justify-content:space-between; padding:14px 0; border-bottom:1px solid rgba(251,248,243,0.14); font-size:0.88rem;}
+  .contact-card .row:last-child{border-bottom:none;}
+  .contact-card .row .l{color:#C9C1AF;}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:50px 0; text-align:center; background:var(--ink);}
+  footer p{font-size:0.76rem; color:#9C9484; letter-spacing:0.03em;}
+  footer .logo{justify-content:center; display:flex; margin-bottom:14px; font-size:1.15rem; color:var(--paper);}
+
+  @media (max-width: 920px){
+    .hero .wrap{grid-template-columns:1fr; gap:30px;}
+    .emblem-wrap{height:260px;}
+    .ring{width:220px; height:220px;}
+    .about-grid{grid-template-columns:1fr;}
+    .services-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .nav-links{display:none;}
+    .section{padding:80px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="logo">AROM<span>A</span></div>
+    <div class="nav-links">
+      <a href="#about" data-fr="L'histoire" data-en="About" data-es="Nosotros">L'histoire</a>
+      <a href="#services" data-fr="Prestations" data-en="Services" data-es="Servicios">Prestations</a>
+      <a href="#gallery" data-fr="Nos plats" data-en="Our dishes" data-es="Nuestros platos">Nos plats</a>
+      <a href="#contact" data-fr="Contact" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+    <div class="lang-toggle">
+      <button id="btn-fr" class="active">FR</button>
+      <button id="btn-en">EN</button>
+      <button id="btn-es">ES</button>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-tex"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-fr="Chef privé & traiteur d'entreprise · École Ferrandi, Paris" data-en="Private Chef & Corporate Catering · Ferrandi Paris" data-es="Chef Privado & Catering Corporativo · Ferrandi París">Chef privé & traiteur d'entreprise · École Ferrandi, Paris</div>
+      <h1 data-fr="La cuisine est un langage. <em>Aroma</em> en est la première phrase." data-en="Cooking is a language. <em>Aroma</em> is how it speaks first." data-es="Cocinar es un lenguaje. <em>Aroma</em> es como habla primero.">La cuisine est un langage. <em>Aroma</em> en est la première phrase.</h1>
+      <p class="lede" data-fr="Repas préparés chez vous ou sur le lieu de votre événement, pour vos dîners privés comme pour les événements d'entreprise — du marché à l'assiette." data-en="Meals prepared at your home or at your event venue, for private dinners as well as corporate events — from market to plate." data-es="Comidas preparadas en tu casa o en el lugar de tu evento, para cenas privadas y eventos de empresa — del mercado al plato.">Repas préparés chez vous ou sur le lieu de votre événement, pour vos dîners privés comme pour les événements d'entreprise — du marché à l'assiette.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="https://wa.me/33769269929" target="_blank" rel="noopener">
+          <span data-fr="Réserver sur WhatsApp" data-en="Book on WhatsApp" data-es="Reservar por WhatsApp">Réserver sur WhatsApp</span>
+        </a>
+        <a class="btn btn-ghost" href="#services" data-fr="Voir les prestations" data-en="View services" data-es="Ver servicios">Voir les prestations</a>
+      </div>
+    </div>
+    <div class="emblem-wrap">
+      <div class="ring">
+        <svg class="leaf-svg" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+          <path d="M170 30 C 150 70, 150 100, 170 130" />
+          <path d="M170 30 C 190 70, 190 100, 170 130" />
+          <path d="M170 310 C 150 270, 150 240, 170 210" />
+          <path d="M170 310 C 190 270, 190 240, 170 210" />
+        </svg>
+        <div class="center">Aroma</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trusted">
+  <div class="wrap trusted-inner">
+    <span class="trusted-label" data-fr="Ils nous ont fait confiance" data-en="Trusted by" data-es="Confían en nosotros">Ils nous ont fait confiance</span>
+    <div class="trusted-logos">
+      <span class="trusted-name">Criteo</span>
+      <span class="trusted-sep">·</span>
+      <span class="trusted-name">Deloitte</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">01</span>
+      <h2 data-fr="Le chef" data-en="The chef" data-es="El chef">Le chef</h2>
+      <span class="tag" data-fr="Formée à Paris" data-en="Trained in Paris" data-es="Formada en París">Formée à Paris</span>
+    </div>
+    <div class="about-grid">
+      <div class="badge">
+        <div class="crest">F</div>
+        <h3 data-fr="École Ferrandi, Paris" data-en="École Ferrandi, Paris" data-es="École Ferrandi, París">École Ferrandi, Paris</h3>
+        <p data-fr="Formation culinaire classique française, dans l'une des écoles de gastronomie les plus reconnues au monde." data-en="Classical French culinary training from one of the world's most respected gastronomy schools." data-es="Formación culinaria francesa clásica de una de las escuelas de gastronomía más respetadas del mundo.">Formation culinaire classique française, dans l'une des écoles de gastronomie les plus reconnues au monde.</p>
+      </div>
+      <div class="about-text">
+        <p data-fr="<strong>Aroma</strong> est née d'une conviction simple : les plus beaux repas se vivent là où vous recevez — chez vous ou sur le lieu de votre événement — préparés avec soin, pensés pour vos invités et votre occasion." data-en="<strong>Aroma</strong> was born from a simple idea: the best meals happen wherever you're hosting — at home or at your event venue — prepared with care, shaped around your guests and your occasion." data-es="<strong>Aroma</strong> nació de una idea simple: las mejores comidas suceden donde tú recibes — en casa o en el lugar de tu evento — preparadas con cuidado.">Aroma est née d'une conviction simple : les plus beaux repas se vivent là où vous recevez — chez vous ou sur le lieu de votre événement — préparés avec soin, pensés pour vos invités et votre occasion.</p>
+        <p data-fr="Formée à l'École Ferrandi à Paris — berceau de la gastronomie française — chaque menu s'appuie sur la technique classique tout en restant ancré dans des produits de saison et de marché." data-en="Trained at École Ferrandi in Paris — the cradle of French gastronomy — every menu draws on classical technique while staying rooted in seasonal, market-driven ingredients." data-es="Formada en la École Ferrandi de París — la cuna de la gastronomía francesa — cada menú se apoya en la técnica clásica.">Formée à l'École Ferrandi à Paris — berceau de la gastronomie française — chaque menu s'appuie sur la technique classique tout en restant ancré dans des produits de saison et de marché.</p>
+        <p data-fr="D'un dîner intime pour deux à un déjeuner de direction pour cinquante collaborateurs, Aroma apporte la cuisine, le savoir-faire et l'organisation directement là où vous en avez besoin." data-en="From an intimate dinner for two to an executive lunch for fifty colleagues, Aroma brings the kitchen, the craft and the organisation directly to where you need it." data-es="Desde una cena íntima para dos hasta un almuerzo ejecutivo para cincuenta personas, Aroma lleva la cocina, el oficio y la organización allí donde lo necesites.">D'un dîner intime pour deux à un déjeuner de direction pour cinquante collaborateurs, Aroma apporte la cuisine, le savoir-faire et l'organisation directement là où vous en avez besoin.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">02</span>
+      <h2 data-fr="Prestations" data-en="Services" data-es="Servicios">Prestations</h2>
+      <span class="tag" data-fr="Sur mesure, pour votre table" data-en="Tailored to your table" data-es="A medida de tu mesa">Sur mesure, pour votre table</span>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0;">
+    <div class="services-grid">
+      <div class="service-card">
+        <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <h3 data-fr="Dîners privés" data-en="Private Dinners" data-es="Cenas Privadas">Dîners privés</h3>
+        <p data-fr="Menus dégustation en plusieurs services, préparés chez vous pour vos repas intimes ou en famille." data-en="Multi-course tasting menus, prepared at your home for intimate or family gatherings." data-es="Menús degustación de varios tiempos, preparados en tu casa para reuniones íntimas o familiares.">Menus dégustation en plusieurs services, préparés chez vous pour vos repas intimes ou en famille.</p>
+      </div>
+      <div class="service-card">
+        <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-7h6v7"/></svg>
+        <h3 data-fr="Événements d'entreprise" data-en="Corporate Events" data-es="Eventos de Empresa">Événements d'entreprise</h3>
+        <p data-fr="Déjeuners de direction, séminaires, lancements de produits : un service traiteur sur mesure dans vos locaux." data-en="Executive lunches, seminars, product launches: a fully tailored catering service on your premises." data-es="Almuerzos ejecutivos, seminarios, lanzamientos de producto: un servicio de catering a medida en tus instalaciones.">Déjeuners de direction, séminaires, lancements de produits : un service traiteur sur mesure dans vos locaux.</p>
+      </div>
+
+
+      <div class="service-card">
+        <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 10h18"/></svg>
+        <h3 data-fr="Chef à la semaine" data-en="Weekly Chef Service" data-es="Chef Semanal">Chef à la semaine</h3>
+        <p data-fr="Préparation régulière de repas pour les foyers qui souhaitent une cuisine digne d'un restaurant, à la maison." data-en="Recurring meal preparation for households who want restaurant-quality food, at home." data-es="Preparación recurrente de comidas para hogares que desean comida de calidad de restaurante.">Préparation régulière de repas pour les foyers qui souhaitent une cuisine digne d'un restaurant, à la maison.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">03</span>
+      <h2 data-fr="Nos plats" data-en="Our dishes" data-es="Nuestros platos">Nos plats</h2>
+      <span class="tag" data-fr="Formule famille" data-en="Family plan" data-es="Plan familiar">Formule famille</span>
+    </div>
+    <div class="price-banner">
+      <p class="pb-text" data-fr="Formule famille : <strong>5 plats faits maison, livrés ou préparés chez vous chaque semaine</strong>, pour une famille de 4 personnes." data-en="Family plan: <strong>5 home-cooked dishes, delivered or prepared at your home every week</strong>, for a family of 4." data-es="Plan familiar: <strong>5 platos caseros, entregados o preparados en tu casa cada semana</strong>, para una familia de 4 personas.">Formule famille : <strong>5 plats faits maison, livrés ou préparés chez vous chaque semaine</strong>, pour une famille de 4 personnes.</p>
+      <div class="pb-amount">
+        <div class="num">120 €</div>
+        <div class="unit" data-fr="par semaine · famille de 4" data-en="per week · family of 4" data-es="por semana · familia de 4">par semaine · famille de 4</div>
+      </div>
+    </div>
+    <div class="dishes-grid">
+      <div class="dish-card">
+        <div class="dish-photo" style="background:linear-gradient(135deg,#E8C9A3,#F2ECE1);"></div>
+        <h3 class="dish-name" data-fr="Mijoté de lentilles, merguez de bœuf" data-en="Lentil Stew, Beef Merguez" data-es="Guiso de lentejas, merguez de ternera">Mijoté de lentilles, merguez de bœuf</h3>
+        <p class="dish-desc" data-fr="Légèrement épicé, merguez de bœuf grillée" data-en="Lightly spiced, grilled beef merguez sausage" data-es="Ligeramente picante, merguez de ternera a la parrilla">Légèrement épicé, merguez de bœuf grillée</p>
+      </div>
+      <div class="dish-card">
+        <div class="dish-photo" style="background:linear-gradient(135deg,#E3D9C2,#F2ECE1);"></div>
+        <h3 class="dish-name" data-fr="Filet de saumon, mayonnaise à l'aneth" data-en="Pan-Seared Salmon, Dill Mayonnaise" data-es="Filete de salmón, mayonesa de eneldo">Filet de saumon, mayonnaise à l'aneth</h3>
+        <p class="dish-desc" data-fr="Poêlé, accompagné de pommes de terre, poivron et fenouil" data-en="Pan-seared, with potatoes, pepper and fennel" data-es="A la plancha, con patatas, pimiento e hinojo">Poêlé, accompagné de pommes de terre, poivron et fenouil</p>
+      </div>
+      <div class="dish-card">
+        <div class="dish-photo" style="background:linear-gradient(135deg,#D9C7AE,#F2ECE1);"></div>
+        <h3 class="dish-name" data-fr="Cordon bleu maison" data-en="House Cordon Bleu" data-es="Cordon bleu de la casa">Cordon bleu maison</h3>
+        <p class="dish-desc" data-fr="Salade verte, pommes de terre et poivrons rôtis" data-en="Green salad, roasted potatoes and peppers" data-es="Ensalada verde, patatas y pimientos asados">Salade verte, pommes de terre et poivrons rôtis</p>
+      </div>
+      <div class="dish-card">
+        <div class="dish-photo" style="background:linear-gradient(135deg,#EBDAC6,#F2ECE1);"></div>
+        <h3 class="dish-name" data-fr="Risotto aux champignons" data-en="Mushroom Risotto" data-es="Risotto de setas">Risotto aux champignons</h3>
+        <p class="dish-desc" data-fr="Champignons de saison, parmesan, huile de truffe" data-en="Seasonal mushrooms, parmesan, truffle oil" data-es="Setas de temporada, parmesano, aceite de trufa">Champignons de saison, parmesan, huile de truffe</p>
+      </div>
+      <div class="dish-card">
+        <div class="dish-photo" style="background:linear-gradient(135deg,#D8C9A8,#F2ECE1);"></div>
+        <h3 class="dish-name" data-fr="Dahl crémeux & tofu grillé" data-en="Creamy Dahl & Grilled Tofu" data-es="Dahl cremoso y tofu a la parrilla">Dahl crémeux & tofu grillé</h3>
+        <p class="dish-desc" data-fr="Lentilles corail, lait de coco, épices indiennes" data-en="Red lentils, coconut milk, Indian spices" data-es="Lentejas rojas, leche de coco, especias indias">Lentilles corail, lait de coco, épices indiennes</p>
+      </div>
+    </div>
+
+    <div class="travel-block">
+      <div class="travel-text">
+        <span class="travel-eyebrow" data-fr="Voyage culinaire de la semaine" data-en="This week's culinary journey" data-es="Viaje culinario de la semana">Voyage culinaire de la semaine</span>
+        <h3 data-fr="Allons en Inde cette semaine" data-en="Let's go to India this week" data-es="Esta semana, viajamos a la India">Allons en Inde cette semaine</h3>
+        <p data-fr="Chaque semaine, un plat d'ailleurs s'invite dans votre formule pour voyager sans sortir de votre salon." data-en="Every week, a dish from elsewhere joins your plan — travel without leaving your living room." data-es="Cada semana, un plato de otro país se une a tu plan — viaja sin salir de tu salón.">Chaque semaine, un plat d'ailleurs s'invite dans votre formule pour voyager sans sortir de votre salon.</p>
+        <div class="travel-dish">
+          <span class="travel-flag" data-fr="🇮🇳" data-en="🇮🇳" data-es="🇮🇳">🇮🇳</span>
+          <span data-fr="Dahl crémeux & tofu grillé" data-en="Creamy Dahl & Grilled Tofu" data-es="Dahl cremoso y tofu a la parrilla">Dahl crémeux & tofu grillé</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap section">
+    <div class="contact-grid">
+      <div>
+        <h2 data-fr="Mettons la table." data-en="Let's set the table." data-es="Pongamos la mesa.">Mettons la table.</h2>
+        <p class="lede" data-fr="Indiquez-moi votre date, vos convives et l'occasion — je m'occupe du reste, du marché à la table." data-en="Tell me your date, your guests and your occasion — I'll take care of the rest, from market to table." data-es="Cuéntame la fecha, los invitados y la ocasión — yo me encargo del resto.">Indiquez-moi votre date, vos convives et l'occasion — je m'occupe du reste, du marché à la table.</p>
+        <a class="whatsapp-btn" href="https://wa.me/33769269929" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A8.9 8.9 0 0 0 12 4a8.9 8.9 0 0 0-7.7 13.4L3 21l3.7-1.3A8.9 8.9 0 0 0 12 21a8.9 8.9 0 0 0 5.6-15.7zM12 19.3a7.3 7.3 0 0 1-3.8-1l-.3-.2-2.7 1 .9-2.6-.2-.3A7.3 7.3 0 1 1 19.3 12 7.3 7.3 0 0 1 12 19.3zm4-5.5c-.2-.1-1.3-.6-1.5-.7s-.4-.1-.5.1-.6.7-.7.8-.3.1-.5 0a6 6 0 0 1-1.8-1.1 6.6 6.6 0 0 1-1.2-1.5c-.1-.2 0-.3.1-.4l.3-.4.2-.3a.4.4 0 0 0 0-.4c0-.1-.5-1.2-.7-1.7s-.4-.4-.5-.4h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 2 4.6 4.6 0 0 0 1 2.3 10.4 10.4 0 0 0 4 3.5c.5.2 1 .4 1.3.5a3.1 3.1 0 0 0 1.4.1 2.3 2.3 0 0 0 1.5-1.1 1.9 1.9 0 0 0 .1-1.1c-.1-.1-.2-.2-.4-.3z"/></svg>
+          <span data-fr="+33 7 69 26 99 29" data-en="+33 7 69 26 99 29" data-es="+33 7 69 26 99 29">+33 7 69 26 99 29</span>
+        </a>
+        <div class="contact-info">
+          <div><span class="k" data-fr="Zone" data-en="Based in" data-es="Con base en">Zone</span> <span data-fr="Disponible pour se déplacer" data-en="Available for travel" data-es="Disponible para desplazamientos">Disponible pour se déplacer</span></div>
+          <div><span class="k" data-fr="Formation" data-en="Training" data-es="Formación">Formation</span> École Ferrandi, Paris</div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <h3 data-fr="Comment se passe une réservation" data-en="How a booking works" data-es="Cómo funciona una reserva">Comment se passe une réservation</h3>
+        <div class="row"><span class="l" data-fr="1. Premier contact" data-en="1. Get in touch" data-es="1. Contacta">1. Premier contact</span><span data-fr="WhatsApp ou message" data-en="WhatsApp or message" data-es="WhatsApp o mensaje">WhatsApp ou message</span></div>
+        <div class="row"><span class="l" data-fr="2. Vos détails" data-en="2. Share the brief" data-es="2. Comparte los detalles">2. Vos détails</span><span data-fr="Date, convives, occasion" data-en="Date, guests, occasion" data-es="Fecha, invitados, ocasión">Date, convives, occasion</span></div>
+        <div class="row"><span class="l" data-fr="3. Proposition de menu" data-en="3. Menu proposal" data-es="3. Propuesta de menú">3. Proposition de menu</span><span data-fr="Sur mesure et validé" data-en="Tailored & confirmed" data-es="A medida y confirmado">Sur mesure et validé</span></div>
+        <div class="row"><span class="l" data-fr="4. Aroma cuisine" data-en="4. Aroma cooks" data-es="4. Aroma cocina">4. Aroma cuisine</span><span data-fr="À votre table" data-en="At your table" data-es="En tu mesa">À votre table</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo" style="justify-content:center;">AROM<span style="color:var(--gold);">A</span></div>
+    <p data-fr="Chef à domicile · École Ferrandi, Paris · © 2026 Aroma. Tous droits réservés." data-en="Private Chef · École Ferrandi, Paris · © 2026 Aroma. All rights reserved." data-es="Chef Privado · École Ferrandi, París · © 2026 Aroma. Todos los derechos reservados.">Chef à domicile · École Ferrandi, Paris · © 2026 Aroma. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script>
+  const buttons = { fr: document.getElementById('btn-fr'), en: document.getElementById('btn-en'), es: document.getElementById('btn-es') };
+  const elements = document.querySelectorAll('[data-fr]');
+
+  function setLang(lang){
+    elements.forEach(el => {
+      const val = el.getAttribute('data-' + lang);
+      if(val !== null){ el.innerHTML = val; }
+    });
+    document.documentElement.lang = lang;
+    Object.keys(buttons).forEach(k => buttons[k].classList.toggle('active', k === lang));
+  }
+
+  buttons.fr.addEventListener('click', () => setLang('fr'));
+  buttons.en.addEventListener('click', () => setLang('en'));
+  buttons.es.addEventListener('click', () => setLang('es'));
+</script>
+
+</body>
+</html>
