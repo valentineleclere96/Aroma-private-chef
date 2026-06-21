@@ -124,6 +124,7 @@
   .btn-ghost{color:var(--ink); border-color:var(--line);}
   .btn-ghost:hover{border-color:var(--ink); transform:translateY(-2px);}
 
+  /* signature: laurel-style plate emblem with sprig lines, classic & French */
   .emblem-wrap{ position:relative; display:flex; align-items:center; justify-content:center; height:440px; }
   .ring{
     width:340px; height:340px; border-radius:50%;
@@ -185,15 +186,18 @@
 
   /* ---------- TRAVEL BLOCK ---------- */
   .travel-block{
-    margin-top:50px; border:1px solid var(--line); background:var(--ink); padding:48px 50px;
+    margin-top:50px; border:1px solid var(--line); background:var(--ink);
     position:relative; overflow:hidden;
+    display:grid; grid-template-columns: 1.2fr 1fr; align-items:stretch;
   }
   .travel-block::before{
     content:""; position:absolute; inset:0;
     background: radial-gradient(circle at 88% 15%, rgba(169,128,62,0.18), transparent 50%);
     pointer-events:none;
   }
-  .travel-text{position:relative; z-index:1; max-width:560px;}
+  .travel-text{position:relative; z-index:1; max-width:560px; padding:48px 50px;}
+  .travel-photo{ position:relative; min-height:260px; overflow:hidden; }
+  .travel-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
   .travel-eyebrow{
     font-size:0.74rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold);
     display:block; margin-bottom:14px;
@@ -268,6 +272,8 @@
     .services-grid{grid-template-columns:1fr;}
     .contact-grid{grid-template-columns:1fr;}
     .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .travel-block{grid-template-columns:1fr;}
+    .travel-photo{min-height:200px;}
     .nav-links{display:none;}
     .section{padding:80px 0;}
   }
@@ -373,11 +379,14 @@
         <h3 data-fr="Événements d'entreprise" data-en="Corporate Events" data-es="Eventos de Empresa">Événements d'entreprise</h3>
         <p data-fr="Déjeuners de direction, séminaires, lancements de produits : un service traiteur sur mesure dans vos locaux." data-en="Executive lunches, seminars, product launches: a fully tailored catering service on your premises." data-es="Almuerzos ejecutivos, seminarios, lanzamientos de producto: un servicio de catering a medida en tus instalaciones.">Déjeuners de direction, séminaires, lancements de produits : un service traiteur sur mesure dans vos locaux.</p>
       </div>
+
+
       <div class="service-card">
         <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 10h18"/></svg>
         <h3 data-fr="Chef à la semaine" data-en="Weekly Chef Service" data-es="Chef Semanal">Chef à la semaine</h3>
         <p data-fr="Préparation régulière de repas pour les foyers qui souhaitent une cuisine digne d'un restaurant, à la maison." data-en="Recurring meal preparation for households who want restaurant-quality food, at home." data-es="Preparación recurrente de comidas para hogares que desean comida de calidad de restaurante.">Préparation régulière de repas pour les foyers qui souhaitent une cuisine digne d'un restaurant, à la maison.</p>
       </div>
+
     </div>
   </div>
 </section>
@@ -398,41 +407,45 @@
     </div>
     <div class="dishes-grid">
       <div class="dish-card">
-        <div class="dish-photo" style="background:linear-gradient(135deg,#E8C9A3,#F2ECE1);"></div>
+        <div class="dish-photo"><img src="images/lentilles-merguez.jpg" alt="Mijoté de lentilles, merguez de bœuf"></div>
         <h3 class="dish-name" data-fr="Mijoté de lentilles, merguez de bœuf" data-en="Lentil Stew, Beef Merguez" data-es="Guiso de lentejas, merguez de ternera">Mijoté de lentilles, merguez de bœuf</h3>
         <p class="dish-desc" data-fr="Légèrement épicé, merguez de bœuf grillée" data-en="Lightly spiced, grilled beef merguez sausage" data-es="Ligeramente picante, merguez de ternera a la parrilla">Légèrement épicé, merguez de bœuf grillée</p>
       </div>
       <div class="dish-card">
-        <div class="dish-photo" style="background:linear-gradient(135deg,#E3D9C2,#F2ECE1);"></div>
+        <div class="dish-photo"><img src="images/saumon.jpg" alt="Filet de saumon, mayonnaise à l'aneth"></div>
         <h3 class="dish-name" data-fr="Filet de saumon, mayonnaise à l'aneth" data-en="Pan-Seared Salmon, Dill Mayonnaise" data-es="Filete de salmón, mayonesa de eneldo">Filet de saumon, mayonnaise à l'aneth</h3>
         <p class="dish-desc" data-fr="Poêlé, accompagné de pommes de terre, poivron et fenouil" data-en="Pan-seared, with potatoes, pepper and fennel" data-es="A la plancha, con patatas, pimiento e hinojo">Poêlé, accompagné de pommes de terre, poivron et fenouil</p>
       </div>
       <div class="dish-card">
-        <div class="dish-photo" style="background:linear-gradient(135deg,#D9C7AE,#F2ECE1);"></div>
-        <h3 class="dish-name" data-fr="Cordon bleu maison" data-en="House Cordon Bleu" data-es="Cordon bleu de la casa">Cordon bleu maison</h3>
-        <p class="dish-desc" data-fr="Salade verte, pommes de terre et poivrons rôtis" data-en="Green salad, roasted potatoes and peppers" data-es="Ensalada verde, patatas y pimientos asados">Salade verte, pommes de terre et poivrons rôtis</p>
+        <div class="dish-photo"><img src="images/chili-boeuf.jpg" alt="Chili de bœuf haché, haricots et tomates cerises"></div>
+        <h3 class="dish-name" data-fr="Chili de bœuf, haricots & tomates cerises" data-en="Beef Chili, Beans & Cherry Tomatoes" data-es="Chili de ternera, alubias y tomates cherry">Chili de bœuf, haricots & tomates cerises</h3>
+        <p class="dish-desc" data-fr="Bœuf haché mijoté, mélange de haricots, tomates cerises et persil frais" data-en="Slow-cooked minced beef, mixed beans, cherry tomatoes and fresh parsley" data-es="Ternera picada cocinada a fuego lento, mezcla de alubias, tomates cherry y perejil fresco">Bœuf haché mijoté, mélange de haricots, tomates cerises et persil frais</p>
       </div>
       <div class="dish-card">
-        <div class="dish-photo" style="background:linear-gradient(135deg,#EBDAC6,#F2ECE1);"></div>
-        <h3 class="dish-name" data-fr="Risotto aux champignons" data-en="Mushroom Risotto" data-es="Risotto de setas">Risotto aux champignons</h3>
-        <p class="dish-desc" data-fr="Champignons de saison, parmesan, huile de truffe" data-en="Seasonal mushrooms, parmesan, truffle oil" data-es="Setas de temporada, parmesano, aceite de trufa">Champignons de saison, parmesan, huile de truffe</p>
+        <div class="dish-photo"><img src="images/salade-pois-chiches.jpg" alt="Salade de pois chiches rôtis, avocat et fromage"></div>
+        <h3 class="dish-name" data-fr="Salade de pois chiches rôtis, avocat & fromage" data-en="Roasted Chickpea, Avocado & Cheese Salad" data-es="Ensalada de garbanzos asados, aguacate y queso">Salade de pois chiches rôtis, avocat & fromage</h3>
+        <p class="dish-desc" data-fr="Roquette, oignon rouge, poivron, fromage frais et pois chiches rôtis aux épices" data-en="Arugula, red onion, pepper, fresh cheese and spiced roasted chickpeas" data-es="Rúcula, cebolla roja, pimiento, queso fresco y garbanzos asados con especias">Roquette, oignon rouge, poivron, fromage frais et pois chiches rôtis aux épices</p>
       </div>
       <div class="dish-card">
-        <div class="dish-photo" style="background:linear-gradient(135deg,#D8C9A8,#F2ECE1);"></div>
-        <h3 class="dish-name" data-fr="Dahl crémeux & tofu grillé" data-en="Creamy Dahl & Grilled Tofu" data-es="Dahl cremoso y tofu a la parrilla">Dahl crémeux & tofu grillé</h3>
-        <p class="dish-desc" data-fr="Lentilles corail, lait de coco, épices indiennes" data-en="Red lentils, coconut milk, Indian spices" data-es="Lentejas rojas, leche de coco, especias indias">Lentilles corail, lait de coco, épices indiennes</p>
+        <div class="dish-photo"><img src="images/patate-douce.jpg" alt="Salade de patate douce rôtie, féta et noix de pécan"></div>
+        <h3 class="dish-name" data-fr="Patate douce rôtie, féta & noix de pécan" data-en="Roasted Sweet Potato, Feta & Pecan Salad" data-es="Boniato asado, feta y nueces pecanas">Patate douce rôtie, féta & noix de pécan</h3>
+        <p class="dish-desc" data-fr="Roquette, chou rouge, tomate, féta et noix de pécan torréfiées" data-en="Arugula, red cabbage, tomato, feta and toasted pecans" data-es="Rúcula, col lombarda, tomate, feta y nueces pecanas tostadas">Roquette, chou rouge, tomate, féta et noix de pécan torréfiées</p>
       </div>
+
     </div>
 
     <div class="travel-block">
       <div class="travel-text">
         <span class="travel-eyebrow" data-fr="Voyage culinaire de la semaine" data-en="This week's culinary journey" data-es="Viaje culinario de la semana">Voyage culinaire de la semaine</span>
-        <h3 data-fr="Allons en Inde cette semaine" data-en="Let's go to India this week" data-es="Esta semana, viajamos a la India">Allons en Inde cette semaine</h3>
+        <h3 data-fr="Découvrez la Thaïlande cette semaine" data-en="Discover Thailand this week" data-es="Descubre Tailandia esta semana">Découvrez la Thaïlande cette semaine</h3>
         <p data-fr="Chaque semaine, un plat d'ailleurs s'invite dans votre formule pour voyager sans sortir de votre salon." data-en="Every week, a dish from elsewhere joins your plan — travel without leaving your living room." data-es="Cada semana, un plato de otro país se une a tu plan — viaja sin salir de tu salón.">Chaque semaine, un plat d'ailleurs s'invite dans votre formule pour voyager sans sortir de votre salon.</p>
         <div class="travel-dish">
-          <span class="travel-flag" data-fr="🇮🇳" data-en="🇮🇳" data-es="🇮🇳">🇮🇳</span>
-          <span data-fr="Dahl crémeux & tofu grillé" data-en="Creamy Dahl & Grilled Tofu" data-es="Dahl cremoso y tofu a la parrilla">Dahl crémeux & tofu grillé</span>
+          <span class="travel-flag" data-fr="🇹🇭" data-en="🇹🇭" data-es="🇹🇭">🇹🇭</span>
+          <span data-fr="Pad see ew aux crevettes" data-en="Shrimp Pad See Ew" data-es="Pad see ew con gambas">Pad see ew aux crevettes</span>
         </div>
+      </div>
+      <div class="travel-photo">
+        <img src="images/pad-see-ew.jpg" alt="Pad see ew aux crevettes">
       </div>
     </div>
   </div>
